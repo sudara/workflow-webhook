@@ -109,4 +109,5 @@ curl $options \
     -H "X-Hub-Signature-256: sha256=$WEBHOOK_SIGNATURE_256" \
     -H "X-GitHub-Delivery: $GITHUB_RUN_NUMBER" \
     -H "X-GitHub-Event: $GITHUB_EVENT_NAME" \
+    --connect-timeout 10 \
     --data "$WEBHOOK_DATA" $WEBHOOK_ENDPOINT
